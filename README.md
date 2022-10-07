@@ -227,6 +227,13 @@ __step 01:__
    
 - Metricas de Avaliacao Regressao:
    
+Metrica           | Valor
+---------         | ------
+MAE               | 0.029
+RMSE              | 0.052
+STD_AMOSTRA       | 0.264
+% MAE/STD_AMOSTRA | 11.11 
+   
 __step 02:__  
 
 - Performance Modelo Para Base de Teste:

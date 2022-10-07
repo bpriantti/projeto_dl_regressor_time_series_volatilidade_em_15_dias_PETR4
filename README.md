@@ -34,7 +34,7 @@ ___
 ## Contents:
  - [Metodologia Foward Forecasting](#metodologia-foward-forecasting) 
  - [Data Request](#data-request) 
- -
+
  
 ### Metodologia Foward Forecasting:
 
@@ -84,7 +84,7 @@ step_4 = data.loc['2014':'2020']
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-02.PNG?raw=true">
    
-> Processo realizado para cada step:
+__Processo realizado para cada step:__
 ```   
    - divindo o bloco de dados (step) em treinamento e teste.
    - preparando os dados para o treinamento de modelo.
@@ -98,7 +98,7 @@ step_4 = data.loc['2014':'2020']
 > Realizou-se este processo ate o fim dos dados no caso 4 steps, em seguida armazeou-se os dados de cada step em um dicionario e em seguida um arquivo txt para posterior analise de todo o conjunto de predicoes.
    
 
-   
+__Script Pre-Processamento dos Dados/Trinamento do Modelo:__ 
 ```
 #---:
 #normalizacao dos dados para compatilibilidade com o framework tensorflow
@@ -184,7 +184,7 @@ y_pred.columns = ['sinal']
 y_test.columns = ['sinal']
 
 ```
-   
+__Script Avaliacao do Modelo(Metricas Regressao):__ 
 ```
 #---:
 #avaliando o modelo e metricas:

@@ -266,22 +266,22 @@ __step 03:__
 - Performance Modelo Para Base de Teste:
 
 <p align="center">
-   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step1.png?raw=true" width="760" height = "400">
+   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step3.png?raw=true" width="760" height = "400">
          
 - Resultado Grafico de QQ-plot:
 
 <p align="center">
-   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step1b.png?raw=true" width="760" height = "400">
+   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step3b.png?raw=true" width="760" height = "400">
    
 - Metricas de Avaliacao Regressao:
 
    Metrica           | Valor
    ---------         | ------
-   MAE               | 0.029
-   RMSE              | 0.052
-   STD_AMOSTRA       | 0.264
-   % MAE/STD_AMOSTRA | 11.11 
-   
+   MAE               | 0.014
+   RMSE              | 0.022
+   STD_AMOSTRA       | 0.136
+   % MAE/STD_AMOSTRA | 10.08 
+  
 __step 04:__  
 
 - Performance Modelo Para Base de Teste:

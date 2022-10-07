@@ -36,7 +36,7 @@ ___
  - [Data Request](#data-request) 
  -
  
-## Metodologia Foward Forecasting:
+### Metodologia Foward Forecasting:
 
 > Para este projeto optou-se por utilizar a metodologia de foward forecasting que consiste em cross validation para series temporais em que se treina-testa o modelo em dados in-sample e dados out-of-sample, o ativo escolhido para este projeto foi a empresa do ramo de extracao de petroleo chamada petrobras com o ticker PETR4, optou-se por utilizar a base de dados historica do periodo de 2001 a 2021, utilizou-se o provedor de dados yfinance, realizou-se o request dos dados com o script de codigos abaixo:
 
@@ -54,8 +54,9 @@ data = yf.download(ticker, start, end)
 
 > Em seguida realizou-se o processo de inpecao da base dados verificando se os mesmos foram baixados corretamente do provedor, sem outliers ou incoformidades visiveis, para este projeto utiliza-se apenas os dados de fechamento ajustado.
 
+<p align="center">
+   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-01.png?raw=true"  width="800" height = "400">
 
 
 #processo por step
-
 #processo completo

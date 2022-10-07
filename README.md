@@ -219,7 +219,7 @@ print(RATIO_MAE)
 
 __step 01:__  
    
-- Permormance Modelo Para base de Teste:
+- Performance Modelo Para base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -227,7 +227,7 @@ __step 01:__
    
 __step 02:__  
 
-- Permormance Modelo Para base de Teste:
+- Performance Modelo Para base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -235,7 +235,7 @@ __step 02:__
    
 __step 03:__  
 
-- Permormance Modelo Para base de Teste:
+- Performance Modelo Para base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -243,7 +243,7 @@ __step 03:__
    
 __step 04:__  
 
-- Permormance Modelo Para base de Teste:
+- Performance Modelo Para base de Teste:
    
 - Resultado Grafico de QQ-plot:
    

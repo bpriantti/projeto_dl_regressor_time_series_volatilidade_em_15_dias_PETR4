@@ -58,5 +58,10 @@ data = yf.download(ticker, start, end)
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-01.png?raw=true"  width="760" height = "400">
 
 
+<p align="center">
+   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-02.PNG?raw=true">
+
+
+
 #processo por step
 #processo completo

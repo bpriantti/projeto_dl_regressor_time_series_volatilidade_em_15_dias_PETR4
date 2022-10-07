@@ -218,9 +218,35 @@ print(RATIO_MAE)
    
 
 __step 01:__  
-__step 02:__  
-__step 03:__  
-__step 04:__  
    
-#processo por step
-#processo completo
+- Permormance Modelo Para base de Teste:
+   
+- Resultado Grafico de QQ-plot:
+   
+- Metricas de Avaliacao Regressao:
+   
+__step 02:__  
+
+- Permormance Modelo Para base de Teste:
+   
+- Resultado Grafico de QQ-plot:
+   
+- Metricas de Avaliacao Regressao:
+   
+__step 03:__  
+
+- Permormance Modelo Para base de Teste:
+   
+- Resultado Grafico de QQ-plot:
+   
+- Metricas de Avaliacao Regressao:
+   
+__step 04:__  
+
+- Permormance Modelo Para base de Teste:
+   
+- Resultado Grafico de QQ-plot:
+   
+- Metricas de Avaliacao Regressao:
+   
+

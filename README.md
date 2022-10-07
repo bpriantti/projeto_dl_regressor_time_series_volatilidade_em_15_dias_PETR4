@@ -217,10 +217,10 @@ print(RATIO_MAE)
 ### Resultado Treinamento/Teste dos Modelos:
    
 
-__step 01:__
-__step 02:__
-__step 03:__
-__step 04:__
+__step 01:__  
+__step 02:__  
+__step 03:__  
+__step 04:__  
    
 #processo por step
 #processo completo

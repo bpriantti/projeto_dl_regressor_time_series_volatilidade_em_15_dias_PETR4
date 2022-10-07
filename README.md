@@ -32,11 +32,13 @@ __Frameworks Utilizados:__
 
 ___
 ## Contents:
- - [Metodologia Foward Forecasting](#metodologia-foward-forecasting) 
- - [Data Request](#data-request) 
+ - [Data Request e Data Wralling Base de Dados](#data-request-e-data-wralling-base-de-dados) 
+ - [Treinamento do Modelo](#treinamento-do-modelo)
+ - [Resultado Treinamento e Teste dos Modelos](#resultado-treinamento-e-teste-dos-modelos)
+ - [Conclusoes e Trabalhos Futuros](#conclusoes-e-trabalhos-futuros)
 
  
-### Metodologia Foward Forecasting:
+### Data Request e Data Wralling Base de Dados:
 
 > Para este projeto optou-se por utilizar a metodologia de foward forecasting que consiste em cross validation para series temporais em que se treina-testa o modelo em dados in-sample e dados out-of-sample, o ativo escolhido para este projeto foi a empresa do ramo de extracao de petroleo chamada petrobras com o ticker PETR4, optou-se por utilizar a base de dados historica do periodo de 2001 a 2021, utilizou-se o provedor de dados yfinance, realizou-se o request dos dados com o script de codigos abaixo:
 
@@ -214,12 +216,12 @@ print(RATIO_MAE)
    
 ```
    
-### Resultado Treinamento/Teste dos Modelos:
+### Resultado Treinamento e Teste dos Modelos:
    
 
 __step 01:__  
    
-- Performance Modelo Para base de Teste:
+- Performance Modelo Para Base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -227,7 +229,7 @@ __step 01:__
    
 __step 02:__  
 
-- Performance Modelo Para base de Teste:
+- Performance Modelo Para Base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -235,7 +237,7 @@ __step 02:__
    
 __step 03:__  
 
-- Performance Modelo Para base de Teste:
+- Performance Modelo Para Base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
@@ -243,10 +245,11 @@ __step 03:__
    
 __step 04:__  
 
-- Performance Modelo Para base de Teste:
+- Performance Modelo Para Base de Teste:
    
 - Resultado Grafico de QQ-plot:
    
 - Metricas de Avaliacao Regressao:
+___
    
-
+### Conclusoes e Trabalhos Futuros:

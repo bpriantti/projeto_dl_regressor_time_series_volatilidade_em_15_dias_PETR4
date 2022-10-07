@@ -52,10 +52,10 @@ end =    "2021-12-31"
 data = yf.download(ticker, start, end)
 ```
 
-> Em seguida realizou-se o processo de inpecao da base dados verificando se os mesmos foram baixados corretamente do provedor, sem outliers ou incoformidades visiveis, para este projeto utiliza-se apenas os dados de fechamento ajustado.
+> Em seguida realizou-se o processo de inpecao da base dados realizando uma visualizacao da serie historica e em seguida verificando se os mesmos foram baixados corretamente do provedor, sem outliers ou incoformidades visiveis, para este projeto utiliza-se apenas os dados de fechamento ajustado.
 
 <p align="center">
-   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-01.png?raw=true"  width="800" height = "400">
+   <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-01.png?raw=true"  width="760" height = "400">
 
 
 #processo por step

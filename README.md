@@ -40,7 +40,7 @@ ___
 
 > Para este projeto optou-se por utilizar a metodologia de foward forecasting que consiste em cross validation para series temporais em que se treina-testa o modelo em dados in-sample e dados out-of-sample, o ativo escolhido para este projeto foi a empresa do ramo de extracao de petroleo chamada petrobras com o ticker PETR4, optou-se por utilizar a base de dados historica do periodo de 2001 a 2021, utilizou-se o provedor de dados yfinance, realizou-se o request dos dados com o script de codigos abaixo:
 
-```
+```python
 #download base de dados:
 ticker = "PETR4.SA"
 
@@ -59,7 +59,7 @@ data = yf.download(ticker, start, end)
 
 > Calculou-se para a base de dados o log-return para a serie de fechamentos e tambem realizou-se o processo de split dos dados, em 4 steps estes que posteriormente servirao para a divisao entre treinamento e teste para o treinamento e teste do modelo.
    
-```
+```python
 # calc returns:
 data['log_returns'] = np.log(data.Close/data.Close.shift(1))
 
@@ -99,7 +99,7 @@ __Processo realizado para cada step:__
    
 
 __Script Pre-Processamento dos Dados/Trinamento do Modelo:__ 
-```
+```python
 #---:
 #normalizacao dos dados para compatilibilidade com o framework tensorflow
 trainingd = data_train['vol_15'].values.reshape(-1,1)
@@ -185,7 +185,7 @@ y_test.columns = ['sinal']
 
 ```
 __Script Avaliacao do Modelo(Metricas Regressao):__ 
-```
+```python
 #---:
 #avaliando o modelo e metricas:
 import statsmodels.api as sm

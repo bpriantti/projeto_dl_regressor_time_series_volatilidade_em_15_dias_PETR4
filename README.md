@@ -306,4 +306,5 @@ ___
    
 ### Conclusões e Trabalhos Futuros:
 
+Podemos concluir que os modelos desenvolvidos com base nas métricas de avaliação apresentaram performances satisfatórias nos horizontes de teste mostrando a eficiência dos modelos de lstm para forecasting de volatilidade em mercados financeiros, Neste projeto não realizou-se o processo de tratamento e modificações dos layers das rnn, em projetos futuros implementar este processo pode ser interessante para a melhoria dos resultados, outro trabalho futuro seria realizar o deploy do modelo e criar uma api juntamente com uma interface para realizar operações estruturadas de compra e venda de volatilidade.
 

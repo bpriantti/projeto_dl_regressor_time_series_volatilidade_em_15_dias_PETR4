@@ -6,7 +6,7 @@ __Bussines Problem:__
 
 __Objetivo:__   
 
-> Desenvolver um modelo quantitativo de Deep Learning, utilizando o framework sklearn, statsmodels para o forecasting da volatilidade em 15 dias do ativo PETR4 listado na bolsa de valores brasileira B3, utilizando o framework keras-tensor-flow.
+> Desenvolver um modelo quantitativo de Deep Learning, utilizando o framework keras-tensorflow para o forecasting da volatilidade em 15 dias do ativo PETR4 listado na bolsa de valores brasileira B3, o modelo deve estimar a regressão da volatilidade futura.
 
 __Autor:__  
    - Bruno Priantti.
@@ -35,12 +35,12 @@ ___
  - [Data Request e Data Wralling Base de Dados](#data-request-e-data-wralling-base-de-dados) 
  - [Treinamento do Modelo](#treinamento-do-modelo)
  - [Resultado Treinamento e Teste dos Modelos](#resultado-treinamento-e-teste-dos-modelos)
- - [Conclusoes e Trabalhos Futuros](#conclusoes-e-trabalhos-futuros)
+ - [Conclusões e Trabalhos Futuros](#conclusões-e-trabalhos-futuros)
 
  
 ### Data Request e Data Wralling Base de Dados:
 
-> Para este projeto optou-se por utilizar a metodologia de foward forecasting que consiste em cross validation para series temporais em que se treina-testa o modelo em dados in-sample e dados out-of-sample, o ativo escolhido para este projeto foi a empresa do ramo de extracao de petroleo chamada petrobras com o ticker PETR4, optou-se por utilizar a base de dados historica do periodo de 2001 a 2021, utilizou-se o provedor de dados yfinance, realizou-se o request dos dados com o script de codigos abaixo:
+> Para este projeto optou-se por utilizar a metodologia de forward forecasting que consiste em cross validation para séries temporais em que se treina-testa o modelo em dados in-sample e dados out-of-sample, o ativo escolhido para este projeto foi a empresa do ramo de extração de petróleo chamada petrobras com o ticker PETR4, optou-se por utilizar a base de dados histórica do período de 2001 a 2021, utilizou-se o provedor de dados yfinance, realizou-se o request dos dados com o script de códigos abaixo:
 
 ```python
 #download base de dados:
@@ -54,12 +54,12 @@ end =    "2021-12-31"
 data = yf.download(ticker, start, end)
 ```
 
-> Em seguida realizou-se o processo de inpecao da base dados realizando uma visualizacao da serie historica e em seguida verificando se os mesmos foram baixados corretamente do provedor, sem outliers ou incoformidades visiveis, para este projeto utiliza-se apenas os dados de fechamento ajustado.
+> Em seguida realizou-se o processo de inspeção da base dados realizando uma visualização da série histórica e em seguida verificando se os mesmos foram baixados corretamente do provedor, sem outliers ou inconformidades visíveis, para este projeto utiliza-se apenas os dados de fechamento ajustado.
 
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-01.png?raw=true"  width="760" height = "400">
 
-> Calculou-se para a base de dados o log-return para a serie de fechamentos e tambem realizou-se o processo de split dos dados, em 4 steps estes que posteriormente servirao para a divisao entre treinamento e teste para o treinamento e teste do modelo.
+> Calculou-se para a base de dados o log-return para a série de fechamentos e também realizou-se o processo de split dos dados, em 4 steps estes que posteriormente servirão para a divisão entre treinamento e teste para o treinamento e teste do modelo.
    
 ```python
 # calc returns:
@@ -81,26 +81,26 @@ step_4 = data.loc['2014':'2020']
 
 ### Treinamento do Modelo:
    
-> Para este projeto optou-se por realizar o treinamento do modelo em steps, como demostrado na imagem abaixo, dividindo o dataset step em treinamento e step para cada step como demostrado na imagem abaixo.
+> Para este projeto optou-se por realizar o treinamento do modelo em steps, como demonstrado na imagem abaixo, dividindo o dataset step em treinamento e step para cada step como demonstrado na imagem abaixo.
 
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/image-02.PNG?raw=true">
    
 __Processo realizado para cada step:__
 ```   
-   - divindo o bloco de dados (step) em treinamento e teste.
-   - preparando os dados para o treinamento de modelo.
-   - config rnn - lstm.
-   - treinamento do modelo.
-   - teste do modelo.
-   - avaliando metricas.
-   - salvando informacoes do step atual.
+   - Dividindo o bloco de dados (step) em treinamento e teste.
+   - Preparando os dados para o treinamento de modelo.
+   - Config rnn - lstm.
+   - Treinamento do modelo.
+   - Teste do modelo.
+   - Avaliando métricas.
+   - Salvando informações do step atual.
 ```
    
-> Realizou-se este processo ate o fim dos dados no caso 4 steps, em seguida armazeou-se os dados de cada step em um dicionario e em seguida um arquivo txt para posterior analise de todo o conjunto de predicoes.
+> Realizou-se este processo até o fim dos dados no caso 4 steps, em seguida armazenou-se os dados de cada step em um dicionário e em seguida um arquivo txt para posterior análise de todo o conjunto de predições.
    
 
-__Script Pre-Processamento dos Dados/Trinamento do Modelo:__ 
+__Script Pré-Processamento dos Dados/Treinamento do Modelo:__ 
 ```python
 #---:
 #normalizacao dos dados para compatilibilidade com o framework tensorflow
@@ -186,7 +186,7 @@ y_pred.columns = ['sinal']
 y_test.columns = ['sinal']
 
 ```
-__Script Avaliacao do Modelo(Metricas Regressao):__ 
+__Script Avaliação do Modelo(Métricas Regressão):__ 
 ```python
 #---:
 #avaliando o modelo e metricas:
@@ -233,7 +233,7 @@ __step 01:__
    
 - Metricas de Avaliacao Regressao:
 
-   Metrica           | Valor
+   Métrica           | Valor
    ---------         | ------
    MAE               | 0.029
    RMSE              | 0.052
@@ -252,9 +252,9 @@ __step 02:__
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step2b.png?raw=true" width="760" height = "400">
    
-- Metricas de Avaliacao Regressao:
+- Métricas de Avaliação Regressão:
 
-   Metrica           | Valor
+   Métrica           | Valor
    ---------         | ------
    MAE               | 0.033
    RMSE              | 0.054
@@ -273,9 +273,9 @@ __step 03:__
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step3b.png?raw=true" width="760" height = "400">
    
-- Metricas de Avaliacao Regressao:
+- Métricas de Avaliação Regressão:
 
-   Metrica           | Valor
+   Métrica           | Valor
    ---------         | ------
    MAE               | 0.014
    RMSE              | 0.022
@@ -294,7 +294,7 @@ __step 04:__
 <p align="center">
    <img src="https://github.com/bpriantti/projeto_dl_regressor_time_series_volatilidade_em_15_dias_PETR4/blob/main/images/step4b.png?raw=true" width="760" height = "400">
    
-- Metricas de Avaliacao Regressao:
+- Métricas de Avaliação Regressão:
 
    Metrica           | Valor
    ---------         | ------
@@ -304,4 +304,6 @@ __step 04:__
    % MAE/STD_AMOSTRA | 9.86  
 ___
    
-### Conclusoes e Trabalhos Futuros:
+### Conclusões e Trabalhos Futuros:
+
+
